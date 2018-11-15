@@ -37,7 +37,6 @@ import sys
 
 server_address = ('localhost', 10000,)
 data = ''.join(sys.argv[1:])
-
 Socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 try:
@@ -45,6 +44,7 @@ try:
     Socket.sendall (data.encode('utf-8') + '\n'.encode('utf-8'))
 
     received = Socket.recv(16)
+
 finally:
     Socket.close()
 
