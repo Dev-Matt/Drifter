@@ -28,7 +28,7 @@ class ThreadedTCPServer(socketserver.ThreadingMixIn, socketserver.TCPServer):
         self.server_close()
 
 if __name__ == '__main__':
-    server_address = (162.247.231.201, 10000,)
+    server_address = ('192.168.0.100', 10000,)
     print ('Listening on: ' + str(server_address))
 
     Server = ThreadedTCPServer(server_address, ThreadedTCPRequestHandler,)
